@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pcher.test.philloso.speedometer.Activity.MainActivity"
+                android:background="@mipmap/blackspeed">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <com.cardiomood.android.controls.gauge.SpeedometerGauge
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:id="@+id/speedometer"
+            android:layout_weight="0.62"
+            android:background="#91030303"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="497dp"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="0.25"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_speed"
+                    android:textColor="#6aff59"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="30sp"
+                    android:layout_margin="20dp"
+                    android:id="@+id/tv_speed"
+                    android:text="0 mph"
+                    android:textColor="#6aff59"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="0.25"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_distance"
+                    android:textColor="#fad622"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="30sp"
+                    android:layout_margin="20dp"
+                    android:id="@+id/tv_distance"
+                    android:text="0 mi"
+                    android:textColor="#fad622"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="0.25"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_time"
+                    android:textColor="#f72222"
+                    />
+
+                <Chronometer
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/chronometer"
+                    android:textSize="30sp"
+                    android:layout_margin="20dp"
+                    android:layout_below="@id/speedometer"
+                    android:textColor="#f72222"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView3"
+        android:src="@mipmap/speedbar"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/linearLayout"
+        android:paddingLeft="200dp"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>
