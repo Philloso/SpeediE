@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements GPSManager.ILocat
     }
 
     @Override
-    public void onMyLocationChanged(Location location) { //Callback
+    public void onMyLocationChanged(Location location) { //Callback whatever
 
         float speed = location.getSpeed(); // speed * 3.6, 3 for km/s
         double currentSpeed = round(speed * 2.236936, 3, BigDecimal.ROUND_HALF_UP); //Changed to mph
